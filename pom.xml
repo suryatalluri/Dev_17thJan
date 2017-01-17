@@ -13,6 +13,20 @@
             </resource>
             <resource>
                 <filtering>true</filtering>
+                <directory>services/Cities/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/LiveListDB/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
                 <directory>services/securityService/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
@@ -97,6 +111,8 @@
                         <configuration>
                             <sources>
                             
+                                <source>services/Cities/src</source>
+                                <source>services/LiveListDB/src</source>
                                 <source>services/securityService/src</source>
                             </sources>
                         </configuration>
@@ -273,6 +289,11 @@
             <artifactId>servlet-api</artifactId>
             <version>2.5</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.38</version>
         </dependency>
     </dependencies>
     <dependencyManagement>
